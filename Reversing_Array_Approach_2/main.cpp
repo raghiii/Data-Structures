@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int *arr;
+    arr= new int[n];
+    for(int i=0;i<n;i++)
+        cin>>arr[i];
+    for(int i=0;i<n/2;i++)
+    {
+        int temp=arr[n-1-i];
+        arr[n-1-i]=arr[i];
+        arr[i]=temp;
+    }
+    for(int i=0;i<n;i++)
+        cout<<arr[i]<<" ";
 }
